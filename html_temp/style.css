@@ -18,15 +18,15 @@
 .mainPage {
   /* background-color: #e9ecef; */
   margin-top: 10vh;
-  height: 60vh;
+  height: 60vh; 
 }
 
 
 .Specific{
-  background-color: #f8f9fa!important;
-  width: 60%;
-  /* box-shadow: 0 .125rem .25rem rgba(0,0.5,0.5,0.3)!important; */
-  padding: 2vh;
+ background-color: #f8f9fa!important;
+ width: 60%;
+ /* box-shadow: 0 .125rem .25rem rgba(0,0.5,0.5,0.3)!important; */
+ padding: 2vh;
 }
 
 .SUsersData img {
@@ -40,7 +40,7 @@
 }
 
 .NotFave:hover {
-  color: dimgrey;
+ color: dimgrey;
 }
 
 
@@ -50,7 +50,7 @@
 
 
 .form-signin input {
-  margin: 10px auto;
+margin: 10px auto;
 }
 
 .form-Reigester input{
@@ -75,7 +75,7 @@ input[type="file"] {
 
 .im {
   height: 25vh;
-  margin: 3vh auto;
+    margin: 3vh auto;
 }
 
 
