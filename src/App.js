@@ -4,6 +4,9 @@ import Nav from './Components/Nav/Nav';
 import Main from './Components/GitHub/Main';
 import Specific from "./Components/GitHub/Specific";
 import Data from "./Components/GitHub/Data";
+import Favorite from "./Components/Favorite/Favorite";
+
+
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import {Provider} from 'react-redux';
 
@@ -32,11 +35,12 @@ class App extends Component {
         return (
 
             <Provider store={this.store}>
-                <Nav store={this.store}/>
                 <Router>
+                    <Nav store={this.store}/>
                     <Route exact path='/' component={Main}/>
                     <Route exact path='/Data/:id' component={Data}/>
                     <Route exact path='/Specific/:login' component={Specific}/>
+                    <Route exact path='/Favorite' component={ Favorite } />
                 </Router>
             </Provider>
 
