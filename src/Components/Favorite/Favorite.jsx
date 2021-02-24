@@ -16,8 +16,10 @@ class Favorite extends Component {
         console.log('Store2', this.props);
         let data = await this.props.Favorite.FavoriteData;
         let BigDATA = [];
-        for(let index = 0; index < data.length ; index++){
+        for(let index = 0; index < data.length ; index++)
+        {
             const user = data[index];
+
             const fetchUsers =  async (user) => {
                 const api_call = await fetch(`https://api.github.com/users/${user}`)
                 const data = await api_call.json();

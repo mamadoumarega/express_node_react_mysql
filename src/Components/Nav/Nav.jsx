@@ -6,7 +6,19 @@ class Nav extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { };
+        this.state = { isAuthentication:false };
+    }
+
+    async componentWillMount(){
+        await this.props.store.subscribe(() => {
+            this.setState({
+                isAuthentication: this.props.store.getState()['Users']['isAuthenticated']
+            })
+        })
+    }
+
+    LogOut = () => {
+        this.props.Logout();
     }
 
     render() {
@@ -19,7 +31,18 @@ class Nav extends Component {
                             <i className="fas fa-heart">Favorites</i>
                         </Link>
                     </nav>
-                    <a className="btn btn-outline-primary" href="#">Sign up</a>
+                    { this.state.isAuthentication ?
+                        <button className="btn btn-outline-danger"
+                                onClick={this.LogOut}
+                        >
+                            Logout
+                        </button>
+                        :
+                        <Link to='/LoginRegister' className="p-2 text-dark ">
+                            <button className="btn btn-outline-primary">Sign up</button>
+                        </Link>
+                    }
+
                 </div>
             </>
         );
